@@ -1,0 +1,29 @@
+{
+    "name": "your-project/server",
+	"version": "1.0.0",
+    "type": "project",
+    "description": "Boilerplate application",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniyal Hamid",
+            "homepage": "https://www.designcise.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "YourProject\\App\\": "app/"
+        },
+        "files": [
+            "helper/func.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YourProject\\App\\Test\\": "test/"
+        }
+    }
+}

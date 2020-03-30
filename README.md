@@ -85,7 +85,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Documentation
 
-Complete documentation for v2.0 will be available soon on https://bitframephp.com.
+Complete documentation for Bitframe v2 will be available on https://bitframephp.com soon.
 
 ## License
 

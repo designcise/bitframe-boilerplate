@@ -6,6 +6,7 @@ Simply clone the repo and start building your projects.
 
 ### Prerequisites:
 
+- BitFrame v2
 - PHP 7.4.0+
 - Nginx
 - Docker Engine 1.13.0+
@@ -80,8 +81,8 @@ Next you can add more middleware, routes, controllers, services, etc. and start 
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-* File issues at https://github.com/designcise/bitframe/issues
-* Issue patches to https://github.com/designcise/bitframe/pulls
+* File issues at https://github.com/designcise/bitframe-boilerplate/issues
+* Issue patches to https://github.com/designcise/bitframe-boilerplate/pulls
 
 ## Documentation
 

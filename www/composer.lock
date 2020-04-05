@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/designcise/bitframe.git",
-                "reference": "3f18d4a3da7e9ebe4db8abd7a97aadcedd507d55"
+                "reference": "192050580ba2e5c24705fd299d01d3102280fe02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/designcise/bitframe/zipball/3f18d4a3da7e9ebe4db8abd7a97aadcedd507d55",
-                "reference": "3f18d4a3da7e9ebe4db8abd7a97aadcedd507d55",
+                "url": "https://api.github.com/repos/designcise/bitframe/zipball/192050580ba2e5c24705fd299d01d3102280fe02",
+                "reference": "192050580ba2e5c24705fd299d01d3102280fe02",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 }
             ],
             "description": "BitFrame PHP microframework",
-            "time": "2020-04-05T02:13:38+00:00"
+            "time": "2020-04-05T03:32:36+00:00"
         },
         {
             "name": "designcise/bitframe-fastroute",

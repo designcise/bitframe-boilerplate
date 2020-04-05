@@ -69,9 +69,8 @@ Following would get you up to speed about the application design:
 
 ### Customizing:
 
-You may begin by customizing `root > server > composer.json`:
+You may begin by customizing `root > composer.json`:
 
-1. Start by customizing the name, author, version, etc. for your project. If you change the package name, make sure you update it in `root > composer.json` as well under "required" dependencies.
 1. Add appropriate namespace to your app code by replacing `YourProject` with something else. Accordingly, please update namespaces throughout the project. A simply find / replace operation would help.
 1. Run `composer dumpautoload` and/or `composer update` to `root > composer.json` to see the changes.
 

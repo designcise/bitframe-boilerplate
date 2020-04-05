@@ -1,15 +1,8 @@
 {
-    "repositories": [
-		{
-			"type": "path",
-			"url": "server"
-		}
-	],
     "require": {
-		"your-project/server": "*",
+		"php": ">=7.4.0",
 		"designcise/bitframe": "2.x-dev",
 		"designcise/bitframe-fastroute": "2.x-dev",
-
 		"nyholm/psr7": "^1.2",
         "middlewares/trailing-slash": "^1.0"
 	},
@@ -19,6 +12,19 @@
 		"squizlabs/php_codesniffer": "3.*",
 		"phpmd/phpmd": "@stable"
     },
+	"autoload": {
+		"psr-4": {
+			"YourProject\\App\\": "server/app/"
+		},
+		"files": [
+			"server/helper/func.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"YourProject\\App\\Test\\": "server/test/"
+		}
+	},
 	"scripts": {
 		"style": "vendor/bin/phpcs --standard=PSR12 server",
 		"test": "vendor/bin/phpunit --configuration phpunit.xml --testsuite unit"

@@ -9,7 +9,7 @@
          processIsolation="false"
 >
     <testsuites>
-        <testsuite name="unit">
+        <testsuite name="tests">
             <directory suffix="Test.php">./server/test</directory>
         </testsuite>
     </testsuites>

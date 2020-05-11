@@ -13,11 +13,12 @@ use function YourProject\Helper\import;
 
     import(Server::CONFIG_DIR . 'settings');
     import(Server::CONFIG_DIR . 'vars', [$container]);
-    import(Server::CONFIG_DIR . 'dependencies', [$container]);
+    import(Server::CONFIG_DIR . 'services', [$container]);
     import(Server::ROUTES_DIR . 'routes', [$container['router']]);
 
     $app->use([
         $container['emitter'],
+        $container['errorHandler'],
         $container['router'],
     ]);
 

@@ -10,4 +10,8 @@ return static function (ContainerInterface $container) {
     $container['settings'] = [
         'title' => 'BitFrame PHP',
     ];
+
+    $container['error_handler_settings'] = [
+        'addTraceToOutput' => $container['server']['env'] === 'dev',
+    ];
 };

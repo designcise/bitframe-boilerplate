@@ -11,8 +11,7 @@ use function YourProject\Helper\import;
     $app = new App();
     $container = $app->getContainer();
 
-    import(Server::CONFIG_DIR . 'settings');
-    import(Server::CONFIG_DIR . 'vars', [$container]);
+    import(Server::CONFIG_DIR . 'settings', [$container]);
     import(Server::CONFIG_DIR . 'services', [$container]);
     import(Server::ROUTES_DIR . 'routes', [$container['router']]);
 

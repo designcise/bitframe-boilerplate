@@ -12,10 +12,14 @@ class DefaultController
         RequestHandlerInterface $handler
     ): ResponseInterface {
         $container = $handler->getContainer();
-        $settings = $container['settings'];
+        $globals = $container['globals'];
 
-        $handler->write("{$settings['title']} - 👋 Build Something Amazing Today!");
+        $response = $handler->handle($request);
 
-        return $handler->handle($request);
+        $response->getBody()->write(
+            "{$globals['title']} - 👋 Build Something Amazing Today!"
+        );
+
+        return $response;
     }
 }

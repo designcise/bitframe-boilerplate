@@ -1,10 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace YourProject\Helper;
 
 use function is_callable;
 
-function import(string $location, array $args = []) {
+/**
+ * @param string $location
+ * @param array $args
+ *
+ * @return mixed
+ */
+function import(string $location, array $args = [])
+{
     if (is_dir($location)) {
         $location .= 'index';
     }

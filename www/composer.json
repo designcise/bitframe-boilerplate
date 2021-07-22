@@ -1,14 +1,14 @@
 {
     "require": {
-		"php": ">=7.4.0",
-		"designcise/bitframe": "^2.0",
-		"designcise/bitframe-fastroute": "^2.0",
-		"designcise/bitframe-whoops": "^2.0",
-		"nyholm/psr7": "^1.2"
+		"php": ">=8.0",
+		"designcise/bitframe": "^3.5",
+		"designcise/bitframe-fastroute": "^3.5",
+		"designcise/bitframe-whoops": "^3.5",
+		"nyholm/psr7": "^1.4"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master",
-		"phpunit/phpunit": "^8.5",
+		"phpunit/phpunit": "^9.5",
 		"squizlabs/php_codesniffer": "3.*",
 		"phpmd/phpmd": "@stable",
 		"phpstan/phpstan": "*"
@@ -30,8 +30,9 @@
 		"sort-packages": true
 	},
 	"scripts": {
-		"style": "vendor/bin/phpcs --standard=PSR12 src",
-		"check": "vendor/bin/phpstan analyse src --level=5 -c phpstan.neon",
+		"style": "vendor/bin/phpcs --standard=PSR12 server",
+		"style-fix": "vendor/bin/phpcbf --standard=PSR12 server",
+		"check": "vendor/bin/phpstan analyse server --level=5 -c phpstan.neon",
 		"md": "vendor/bin/phpmd src text cleancode,unusedcode,codesize,design,naming",
 		"test": "vendor/bin/phpunit --configuration phpunit.xml --testsuite tests"
 	}

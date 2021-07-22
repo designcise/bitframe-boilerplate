@@ -11,13 +11,11 @@ RUN composer install \
       --optimize-autoloader \
       --prefer-dist
 
-FROM php:7.4.0-fpm AS base
+FROM php:8.0.8-fpm AS base
 COPY --from=vendor /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update \
-    && apt-get install -y --fix-missing curl vim wget netcat chrpath git unzip zip \
-    && pecl -d preferred_state=beta install xdebug \
-    && docker-php-ext-enable xdebug \
+    && apt-get install -y --fix-missing curl git vim wget netcat chrpath git unzip zip \
     && usermod -u 1000 www-data \
     && usermod -G staff www-data \
     && chown -R www-data:www-data /var/www \
@@ -25,7 +23,6 @@ RUN apt-get update \
     && chmod 700 /usr/bin/composer
 
 COPY ./docker/php.ini /usr/local/etc/php/conf.d/99_custom.ini
-COPY ./docker/xdebug.ini /usr/local/etc/php/conf.d/
 
 WORKDIR /var/www/html
 

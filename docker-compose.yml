@@ -4,7 +4,7 @@ volumes:
   vendor:
 
 services:
-  web:
+  nginx:
     image: nginx:latest
     container_name: bitframe_ngx
     ports:

@@ -6,8 +6,8 @@ Simply clone the repo and start building your projects.
 
 ### Prerequisites:
 
-- BitFrame v3.5
-- PHP 8.0+
+- BitFrame v3.6
+- PHP 8.1+
 - Nginx
 - Docker Engine 1.13.0+
 

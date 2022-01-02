@@ -1,9 +1,9 @@
 {
     "require": {
-		"php": ">=8.0",
-		"designcise/bitframe": "^3.5",
-		"designcise/bitframe-fastroute": "^3.5",
-		"designcise/bitframe-whoops": "^3.5",
+		"php": ">=8.1",
+		"designcise/bitframe": "^3.6",
+		"designcise/bitframe-fastroute": "^3.6",
+		"designcise/bitframe-whoops": "^3.6",
 		"nyholm/psr7": "^1.4"
 	},
 	"require-dev": {

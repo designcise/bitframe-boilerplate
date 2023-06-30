@@ -11,7 +11,7 @@ RUN composer install \
       --optimize-autoloader \
       --prefer-dist
 
-FROM php:8.1.1-fpm AS base
+FROM php:8.2-fpm AS base
 COPY --from=vendor /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update \

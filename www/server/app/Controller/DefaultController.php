@@ -8,6 +8,7 @@ use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
 use Psr\Http\Server\RequestHandlerInterface;
 use BitFrame\Container;
 use BitFrame\FastRoute\Route;
+use BitFrame\Http\Message\JsonResponse;
 
 class DefaultController
 {
@@ -16,7 +17,7 @@ class DefaultController
     ) {}
 
     #[Route(['GET'], '/hello/{action}')]
-    public function testAction(
+    public function indexAction(
         ServerRequestInterface $request,
         RequestHandlerInterface $handler,
     ): ResponseInterface {
@@ -28,5 +29,18 @@ class DefaultController
         );
 
         return $response;
+    }
+
+    #[Route(['GET'], '/json')]
+    public function jsonAction(): ResponseInterface
+    {
+        $globals = $this->container['globals'];
+
+        return JsonResponse::create([
+            'data' => [
+                'title' => $globals['title'],
+                'mainHeading' => 'Build Something Amazing Today!',
+            ],
+        ]);
     }
 }

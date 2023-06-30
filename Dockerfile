@@ -15,7 +15,7 @@ FROM php:8.2-fpm AS base
 COPY --from=vendor /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update \
-    && apt-get install -y --fix-missing curl git vim wget netcat chrpath git unzip zip \
+    && apt-get install -y --fix-missing curl git vim wget chrpath git unzip zip \
     && usermod -u 1000 www-data \
     && usermod -G staff www-data \
     && chown -R www-data:www-data /var/www \

@@ -6,9 +6,9 @@ Simply clone the repo and start building your projects.
 
 ### Prerequisites:
 
-- BitFrame v3.6
-- PHP 8.1+
-- Nginx
+- BitFrame v4.0
+- PHP 8.2+
+- Nginx (or Apache)
 - Docker Engine 1.13.0+
 
 ## Directory Structure
